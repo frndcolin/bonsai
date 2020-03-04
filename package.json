@@ -4,7 +4,11 @@
   "description": "cli tool for project generation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "shx rm -rf dist && shx cp -r src dist"
+  },
+  "bin": {
+    "bonsai": "./dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +28,7 @@
     "yargs": "^15.2.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "shx": "^0.3.2"
   }
 }
