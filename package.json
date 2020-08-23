@@ -1,34 +1,44 @@
 {
-  "name": "bonsai",
-  "version": "1.0.0",
-  "description": "cli tool for project generation",
-  "main": "index.js",
+  "name": "@frndcolin/bonsai",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "shx rm -rf dist && shx cp -r src dist"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook"
   },
-  "bin": {
-    "bonsai": "./dist/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/frndcolin/bonsai.git"
-  },
-  "author": "Colin Friend (frnd.colin@gmail.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/frndcolin/bonsai/issues"
-  },
-  "homepage": "https://github.com/frndcolin/bonsai#readme",
   "dependencies": {
-    "chalk": "^3.0.0",
-    "ejs": "^3.0.1",
-    "inquirer": "^7.0.5",
-    "shelljs": "^0.8.3",
-    "yargs": "^15.2.0"
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "shx": "^0.3.2"
+    "@babel/core": "^7.11.0",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/vue": "^5.3.19",
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "storybook-addon-vue-info": "^1.4.2",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue-functional-data-merge": "^3.1.0",
+    "vue-template-compiler": "^2.6.11"
   }
 }
