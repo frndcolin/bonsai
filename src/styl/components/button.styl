@@ -12,22 +12,28 @@ button, .bonsai-button
   font-weight 500
   letter-spacing 0.1rem
   line-height 1em
-  margin 0.5rem
+  margin 1rem
   padding 0.75rem 1.5rem
   text-align center
   text-decoration none
   white-space nowrap
   transition all 0.3s
+  user-select none
+  outline none
+  shadow(red(highlight), green(highlight), blue(highlight))
   &:hover
   &:focus
-    background var(--highlight-dn1)
+    background var(--highlight-dn2)
     outline 0
   &:active
-    background var(--highlight-up1)
+    background var(--highlight-up2)
+  &.no-shadow
+    box-shadow none
   &.ghost
     color var(--highlight)
     border 2px solid var(--highlight)
     background-color transparent
+    box-shadow none
     &:hover
       background-color var(--highlight-dn1)
       border 2px solid var(--highlight-dn1)
@@ -40,6 +46,7 @@ button, .bonsai-button
     background-color transparent
     border 2px solid var(--gray-4)
     color var(--gray-5)
+    box-shadow none
     &:hover
       background-color var(--gray-5)
       border 2px solid var(--gray-5)

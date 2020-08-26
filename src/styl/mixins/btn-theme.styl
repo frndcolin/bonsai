@@ -1,0 +1,19 @@
+theme(name, r, g, b)
+  background convert(name)
+  shadow(r, g, b)
+  &:hover
+    background convert(name + '-hover')
+    shadow-hover(r, g, b)
+  &:active
+    background convert(name + '-active')
+    shadow-active(r, g, b)
+  &.inverted
+    background transparent
+    color convert(name)
+    font-weight 600
+    border 2px solid convert(name)
+    box-shadow none
+    &:hover
+      background convert(name + '-hover')
+      border-color convert(name + '-hover')
+      color var(--white)
